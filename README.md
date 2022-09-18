@@ -1,6 +1,7 @@
 <img src="imgs/large.jpg" width="350" title="hover text">
-# pocketNotion
-The chrome extension is named after Notion, a popular productivity website. In the extension, users can create to-do lists, and look at weather and news stories in the area. Additionally, the user can customize the way the extension looks on their screen to ensure optimal usage.
+
+
+This chrome extension is named after Notion, a popular productivity website. In the extension, users can create to-do lists, and look at weather and news stories in the area. Additionally, the user can customize the way the extension looks on their screen to ensure optimal usage.
 
 # Inspiration
 This project was inspired by yours truly. As a person who gets distracted a lot, I decided to create a chrome extension that promotes productivity in a way that is easily accessible, and visually pleasing.
