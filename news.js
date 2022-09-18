@@ -1,4 +1,5 @@
 let country = "ca";
+const newsKey = config.NEWS_KEY;
 
 run(); 
 var locationArr = document.querySelector('#searchTextField').value.split(',');
@@ -10,7 +11,7 @@ document.querySelector('#searchTextField').addEventListener('change', (event) =>
 });
 
 function run() {
-    fetch('https://gnews.io/api/v4/top-headlines?country=' + country + '&lang=en&token=82e2a218b70720574681852246d3412f')
+    fetch('https://gnews.io/api/v4/top-headlines?country=' + country + '&lang=en&token=' + newsKey)
 .then(function (response) {
     return response.json();
 })
