@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/da0ee8e8d8.js" crossorigin="anonymous"></script>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="popup.css">
+
+</head>
+
+
+<body>
+
+  <section class="title">
+    <div class="container-fluid">
+      <!-- tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ToDo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Temp.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">News</a>
+        </li>
+
+      </ul>
+
+      <!-- Settings trigger -->
+      <a data-toggle="modal" data-target="#exampleModal"><i class="settings fas fa-cog"></i></a>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="bg-selector" class="setting-label bg-color-container">Switch background color: 
+                <input id="colorwell" type="color" class="color" value="#000000"/>
+              </div>
+              <div class="setting-label bg-color-container">Enter your location (City, Country code):
+                <input id="searchTextField" class="setting-label" type="text" autocomplete="off" placeholder="Waterloo,CA">
+             </div>
+            </div>
+            <span class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  </section>
+     
+
+      <!-- tab contents -->
+      <div class="tab-content" id="myTabContent">
+
+        <!-- to do list -->
+        <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <section class="title">
+            <br>
+            <h1 class="big-heading">To Do List</h1>
+            <br>
+          </section>
+
+          <form  action="#">
+            <input type="text" name="item" id="item" autocomplete="off" placeholder="What needs to be done?"/>
+          </form>  
+          <ul id="list"></ul>
+        </div>
+
+
+        <!-- weather -->
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <section class="title">
+            <br>
+            <h1 class="big-heading">Weather</h1>
+            <br>
+          </section>
+          
+          <div class="center" id="description"></div>
+          <h1 class="center" id="temp"></h1>
+          <div class="center" id="location"></div>
+
+          <div id="icon"></div>
+        </div>
+
+        <!-- news content -->
+        <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <section class="title">
+            <br>
+            <h1 class="big-heading">News</h1>
+            <br>
+          </section>
+          
+          <h3 id="headline" class="news"></h3>
+          <p id="details" class="news"></p>
+          <p><a id="news-link" class="news">Learn More</a></p>
+          <br>
+
+          <h3 id="headline2" class="news"></h3>
+          <p id="details2" class="news"></p>
+          <p><a id="news-link2" class="news">Learn More</a></p>
+          <br>
+
+          <h3 id="headline3" class="news"></h3>
+          <p id="details3" class="news"></p>
+          <p><a id="news-link3" class="news">Learn More</a></p>
+          <br>
+
+          <h3 id="headline4" class="news"></h3>
+          <p id="details4" class="news"></p>
+          <p><a id="news-link4" class="news">Learn More</a></p>
+          <br>
+
+          <h3 id="headline5" class="news"></h3>
+          <p id="details5" class="news"></p>
+          <p><a id="news-link5" class="news">Learn More</a></p>
+          <br>
+
+
+        </div>
+
+      </div>
+
+      <!-- footer -->
+      <footer id="footer">
+       
+      </footer>
+
+    </div>
+  <script src="news.js"></script>
+  <script src="popup.js"></script>
+  <script src="settings.js"></script>
+  
+
+</body>
+
+</html>
