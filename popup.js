@@ -39,7 +39,7 @@
 // weather javascript
 const weatherKey = config.WEATHER_KEY;
 function weatherBallon( cityID ) {
-	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ '&appid=' + key)  
+	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ '&appid=' + weatherKey)  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
 		drawWeather(data);
